@@ -17,23 +17,16 @@ board = {
     7: ' ', 8: ' ', 9: ' '
 }
 
-# TODO: update the gameboard with the user input
 def markBoard(position, mark):
     board[position] = mark
     return board
 
 
-# TODO: print the game board as described at the top of this code skeleton
-# Will not be tested in Part 1
 def printBoard():
     return
 
 
-
-# TODO: check for wrong input, this function should return True or False.
 # True denoting that the user input is correct
-# you will need to check for wrong input (user is entering invalid position) or position is out of bound
-# another case is that the position is already occupied
 def validateMove(position):
     position = str(position)
     if position.isdigit():
@@ -45,8 +38,6 @@ def validateMove(position):
     return False
     
 
-# TODO: list out all the combinations of winning, you will neeed this
-# one of the winning combinations is already done for you
 winCombinations = [
     [1, 2, 3],
     [4, 5, 6],
@@ -58,7 +49,6 @@ winCombinations = [
     [3, 5, 7],
 ]
 
-# TODO: implement a logic to check if the previous winner just win
 # This method should return with True or False
 def checkWin(player):
     for i in winCombinations:
@@ -67,8 +57,6 @@ def checkWin(player):
     return False
 
 
-# TODO: implement a function to check if the game board is already full
-# For tic-tac-toe, tie bascially means the whole board is already occupied
 # This function should return with boolean
 def checkFull():
     for i in range(1, 10):
@@ -78,8 +66,7 @@ def checkFull():
 
 
 
-# Main Program, a Tester for your functions
-# It does not cover the printBoard() function.
+
 
 tc = unittest.TestCase()
 
